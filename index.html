@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+
+<body>
+<div class="container">
+  <h1>💰 Hisav-Nikash</h1>
+  <button class="toggle-btn" onclick="toggleTheme()">🌙 Toggle Dark Mode</button>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Current Balance</h3>
+      <div id="balance" class="balance">0</div>
+      <p>Income: <span id="income" class="income">0</span></p>
+      <p>Expense: <span id="expense" class="expense">0</span></p>
+    </div>
+
+    <div class="card">
+      <h3>Add Transaction</h3>
+      <form id="form">
+        <input type="text" id="title" placeholder="Title" required />
+        <input type="number" id="amount" placeholder="Amount" required />
+        <input type="date" id="date" required />
+        <select id="type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <button type="submit">Add</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h3>Analytics</h3>
+      <canvas id="chart"></canvas>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:20px;">
+    <h3>Transactions</h3>
+    <div class="search-box">
+      <input type="text" id="search" placeholder="Search by title..." />
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" onclick="setFilter('all', event)">All</button>
+      <button class="filter-btn" onclick="setFilter('income', event)">Income</button>
+      <button class="filter-btn" onclick="setFilter('expense', event)">Expense</button>
+    </div>
+
+    <div id="list"></div>
+  </div>
+</div>
