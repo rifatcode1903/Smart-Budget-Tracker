@@ -1,26 +1,22 @@
+ * { 
+     box-sizing: border-box; }
 
-  .style
-    * { box-sizing: border-box; }
-
-    body {
+ body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #DBFEB8, #C5EDAC);
       transition: 0.3s;
     }
-
-    body.dark {
+     body.dark {
       background: #1f2937;
       color: #e5e7eb;
     }
-
-    .container {
+     .container {
       max-width: 1000px;
       margin: 40px auto;
       padding: 20px;
     }
-
-    h1 { text-align: center; margin-bottom: 10px; }
+     h1 { text-align: center; margin-bottom: 10px; }
 
     .toggle-btn {
       display: block;
@@ -34,7 +30,7 @@
       font-weight: 600;
     }
 
-    body.dark .toggle-btn {
+     body.dark .toggle-btn {
       background: #374151;
       color: #fff;
     }
@@ -46,45 +42,47 @@
     }
 
     .card {
-      background: #FAFFFD;
+      background: #ffffffcc;
       backdrop-filter: blur(10px);
       padding: 20px;
       border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.38);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
       transition: 0.3s;
     }
 
-    body.dark .card {
+      body.dark .card {
       background: #374151;
     }
-
-
-    .balance { font-size: 28px; font-weight: bold; }
-    .income { color: #22c55e; font-weight: bold; }
+   .balance { font-size: 28px; font-weight: bold; }
+    
+   .income { color: #22c55e; font-weight: bold; }
+    
     .expense { color: #ef4444; font-weight: bold; }
 
-    form { display: flex; flex-wrap: wrap; gap: 10px; }
-    input, select, button { padding: 10px; border-radius: 8px; border: 1px solid #ddd; font-size: 14px; }
-    input, select { flex: 1; }
+  form { display: flex; flex-wrap: wrap; gap: 10px; }
 
-    button {
+    input, select, button { padding: 10px; border-radius: 8px; border: 1px solid #ddd; font-size: 14px; }
+    
+    input, select { flex: 1; }
+ 
+      button {
       background: #C5EDAC;
       color: #1f2937;
       font-weight: 600;
       border: none;
-      transition: 0.3s;
-    }
-    button:hover { background: #A7E08C; }
+      transition: 0.3s;}
+    
+     button:hover { background: #A7E08C; }
 
-    .filters { display: flex; gap: 10px; margin-bottom: 10px; }
+   .filters { display: flex; gap: 10px; margin-bottom: 10px; }
+
     .filter-btn {
       padding: 6px 10px;
       border-radius: 6px;
       border: 1px solid #C5EDAC;
       cursor: pointer;
       background: #DBFEB8;
-      font-weight: 500;
-    }
+      font-weight: 500;}
     body.dark .filter-btn { background: #4b5563; color: #fff; }
     .active { background: #C5EDAC; color: #1f2937; }
 
@@ -97,7 +95,8 @@
       padding: 12px 0;
       border-bottom: 1px solid #d1fae5;
     }
-    body.dark .list-item { border-color: #6b7280; }
+
+     body.dark .list-item { border-color: #6b7280; }
 
     .delete-btn {
       background: #ef4444;
@@ -107,6 +106,6 @@
       border-radius: 6px;
       cursor: pointer;
     }
-
+    
     canvas { max-width: 300px; margin: auto; display: block; }
-  
+    

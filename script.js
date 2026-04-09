@@ -20,6 +20,7 @@ searchInput.addEventListener("input", () => { searchText = searchInput.value.toL
 
 form.addEventListener("submit", e => {
   e.preventDefault();
+
   const transaction = { id: Date.now(), title: title.value, amount: +amount.value, date: date.value, type: type.value };
   transactions.push(transaction);
   update();
@@ -27,6 +28,7 @@ form.addEventListener("submit", e => {
 });
 
 function deleteTransaction(id) { transactions = transactions.filter(t => t.id !== id); update(); }
+
 function setFilter(type, e) { currentFilter = type; document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active')); e.target.classList.add('active'); update(); }
 
 function update() {
@@ -36,6 +38,7 @@ function update() {
   let income = 0, expense = 0;
   transactions.filter(t => (currentFilter==='all'||t.type===currentFilter) && t.title.toLowerCase().includes(searchText))
               .forEach(t => {
+
     const div = document.createElement("div");
     div.classList.add("list-item");
     div.innerHTML = `<span>${t.title} (${t.date})</span><span class="${t.type}">${t.amount}</span><button class="delete-btn" onclick="deleteTransaction(${t.id})">Delete</button>`;
@@ -43,7 +46,7 @@ function update() {
     t.type==='income'?income+=t.amount:expense+=t.amount;
   });
 
-  balanceEl.textContent = income-expense;
+balanceEl.textContent = income-expense;
   incomeEl.textContent = income;
   expenseEl.textContent = expense;
   updateChart(income, expense);

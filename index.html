@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Budget Tracker</title>
+    <title>Hisav-koren</title>
     <link rel="stylesheet" href="style.css">
-     
+     <title>Hisav-koren - Digital Expense Manager</title>
+<meta name="description" content="Manage your daily income and expenses easily with Hisav-Nikash web app.">
     
 </head>
 
 <body>
 <div class="container">
-  <h1>💰 Hisav-Nikash</h1>
-  <button class="toggle-btn" onclick="toggleTheme()">🌙 Toggle Dark Mode</button>
-    <button class="toggle-btn" onclick="toggleTheme()">☀️ Toggle Dark Mode</button>
+  <h1>💰 Hisav-koren</h1>
+  <button class="toggle-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
+  
 <!--Current Balance part-->
   <div class="grid">
     <div class="card">
@@ -22,8 +23,8 @@
       <p>Income: <span id="income" class="income">0</span></p>
       <p>Expense: <span id="expense" class="expense">0</span></p>
     </div>
-<!-- Transaction part -->
 
+<!-- Transaction part -->
     <div class="card">
       <h3>Add Transaction</h3>
       <form id="form">
@@ -37,12 +38,14 @@
         <button type="submit">Add</button>
       </form>
     </div>
+
 <!--Analytics part -->
     <div class="card">
       <h3>Analytics</h3>
       <canvas id="chart"></canvas>
     </div>
   </div>
+  
 <!--Transactions part -->
   <div class="card" style="margin-top:20px;">
     <h3>Transactions</h3>
@@ -61,4 +64,5 @@
 </div>
 </body>
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </html>
